@@ -22,7 +22,7 @@ function logInForm(event)
   console.log(inputEmail);
   const inputPassword = document.querySelector("#inputPassword").value;
   console.log(inputPassword);  
-  const inputShowPassword = document.querySelector("inputShowPassword").value;
+  const inputShowPassword = document.querySelector("#inputShowPassword").clicked;
   console.log(inputShowPassword);
 
   const displayResult = document.querySelector("#displayResult");
@@ -37,17 +37,18 @@ function logInForm(event)
   // modifiser
   displayInputEmail.textContent = inputEmail;
   displayInputPassword.textContent = inputPassword;
-  if(inputEmail == "" && inputPassword =="")
+  successfulLogIn.textContent = "Du har logget deg inn riktig" + inputEmail;
+  failedLogIn.textContent = "Epost eller passord er feil.";
+  if(inputEmail.length > 0 && inputPassword.length > 0)
   {
-    successfulLogIn.textContent = "Du har logget deg inn riktig" + inputEmail;
+    displayResult.appendChild(successfulLogIn);
   }
   else
   {
-   failedLogIn.textContent = "Epost eller passord er feil.";
+    displayResult.appendChild(failedLogIn);
   }
 
-  displayResult.appendChild(displayInputEmail);
-  displayResult.appendChild(displayInputPassword);
+ 
   
   // Send
 
