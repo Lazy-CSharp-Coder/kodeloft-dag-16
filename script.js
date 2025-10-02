@@ -1,19 +1,53 @@
-// Hente et element = Hente
-const hamburgerImg = document.querySelector("#hamburgerImg");
+/*
+ID-navn :
+inputEmail
+inputPassword
+inputShowPassword
+inputRemeberUser
+loginButton
+displayResult
+*/
 
-// Alternativ 1:
-// Ha en funksjon = Modifiserer
-// Laget en funksjon som henter navList-elementet og bytter klassenavn for synlig/usynlig
-function hamburgerToggle() {
-  console.log("Hi from hamburgerToggle");
+// start logInButton
 
-  const navListElement = document.querySelector(".navList"); // Bevist brukt klasse for kun et element med det klassenavnet
-  console.log(navListElement);
+const logInButton = document.querySelector("#logInButton");
 
-  // Metode 1: Skrive CSS i JS som blir inline-CSS
-  navListElement.style.display = "flex";
-  navListElement.style.flexDirection = "column";
+function logInForm(event)
+{
+  event.preventDefault();  // Ordet event er utgått men det funker
+  console.log("Button clicked");
+
+  // hent
+  const inputEmail = document.querySelector("#inputEMail").value;
+  console.log(inputEmail);
+  const inputPassword = document.querySelector("#inputPassword").value;
+  console.log(inputPassword);  
+
+  // lag
+  const displayInputEmail = document.createElement("p");
+  const displayInputPassword = document.createElement("p");
+  // modifiser
+
+  // modifiser
+  displayInputEmail.textContent = inputEmail;
+  displayInputPassword.textContent = inputPassword;
+
+  displayResult.appendChild(displayInputEmail);
+  displayResult.appendChild(displayInputPassword);
+  
+  // Send
+
+  const displayResult = document.querySelector("#displayResult");
+  console.log(displayResult);
+
+  
+
+
+   
 }
 
-// Aktiverer en funksjon = Sender
-hamburgerImg.addEventListener("click", hamburgerToggle);
+logInButton.addEventListener("click", logInForm);
+
+// end button
+
+// start
