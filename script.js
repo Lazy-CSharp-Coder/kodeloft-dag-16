@@ -18,10 +18,14 @@ function logInForm(event)
   console.log("Button clicked");
 
   // hent
-  const inputEmail = document.querySelector("#inputEMail").value;
+  const inputEmail = document.querySelector("#inputEmail").value;
   console.log(inputEmail);
   const inputPassword = document.querySelector("#inputPassword").value;
   console.log(inputPassword);  
+  const inputShowPassword = document.querySelector("inputShowPassword").clicked;
+  console.log(inputShowPassword);
+
+  const displayResult = document.querySelector("#displayResult");
 
   // lag
   const displayInputEmail = document.createElement("p");
@@ -37,7 +41,7 @@ function logInForm(event)
   
   // Send
 
-  const displayResult = document.querySelector("#displayResult");
+  
   console.log(displayResult);
 
   
