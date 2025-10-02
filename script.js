@@ -22,7 +22,7 @@ function logInForm(event)
   console.log(inputEmail);
   const inputPassword = document.querySelector("#inputPassword").value;
   console.log(inputPassword);  
-  const inputShowPassword = document.querySelector("inputShowPassword").clicked;
+  const inputShowPassword = document.querySelector("inputShowPassword").value;
   console.log(inputShowPassword);
 
   const displayResult = document.querySelector("#displayResult");
@@ -30,11 +30,21 @@ function logInForm(event)
   // lag
   const displayInputEmail = document.createElement("p");
   const displayInputPassword = document.createElement("p");
+  const successfulLogIn = document.createElement("p");
+  const failedLogIn = document.createElement("p");
   // modifiser
 
   // modifiser
   displayInputEmail.textContent = inputEmail;
   displayInputPassword.textContent = inputPassword;
+  if(inputEmail == "" && inputPassword =="")
+  {
+    successfulLogIn.textContent = "Du har logget deg inn riktig" + inputEmail;
+  }
+  else
+  {
+   failedLogIn.textContent = "Epost eller passord er feil.";
+  }
 
   displayResult.appendChild(displayInputEmail);
   displayResult.appendChild(displayInputPassword);
